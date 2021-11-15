@@ -1,0 +1,2 @@
+-- Dla ka¿dej kategorii produktu (nazwa), podaj ³¹czn¹ wartoœæ zamówionych przez
+-- klientów jednostek towarów z tek kategorii.USE NorthwindSELECT CategoryName, SUM(Quantity * [Order Details].UnitPrice * (1 - Discount)) as 'Total value'FROM CategoriesJOIN Products ON Categories.CategoryID = Products.ProductIDJOIN [Order Details] ON Products.ProductID = [Order Details].ProductIDGROUP BY CategoryName
