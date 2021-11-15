@@ -1,0 +1,1 @@
+-- Dla ka¿dego przewoŸnika (nazwa) podaj liczbê zamówieñ które przewieŸli w 1997rUSE NorthwindSELECT CompanyName, COUNT(DISTINCT Orders.OrderID)FROM ShippersJOIN Orders ON Shippers.ShipperID = Orders.ShipViaJOIN [Order Details] ON .Orders.OrderID = [Order Details].OrderIDWHERE YEAR(Orders.OrderDate) = 1997GROUP BY CompanyName
