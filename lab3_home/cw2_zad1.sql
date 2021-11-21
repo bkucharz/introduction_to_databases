@@ -1,2 +1,2 @@
 -- Dla ka¿dej kategorii produktu (nazwa), podaj ³¹czn¹ liczbê zamówionych przez
--- klientów jednostek towarów z tek kategorii.USE NorthwindSELECT CategoryName, SUM(Quantity) as 'Total quantity'FROM CategoriesJOIN Products ON Categories.CategoryID = Products.ProductIDJOIN [Order Details] ON Products.ProductID = [Order Details].ProductIDGROUP BY CategoryName
+-- klientów jednostek towarów z tek kategorii.USE NorthwindSELECT CategoryName, SUM(Quantity) as 'Total quantity'FROM CategoriesJOIN Products ON Categories.CategoryID = Products.CategoryIDJOIN [Order Details] ON Products.ProductID = [Order Details].ProductIDGROUP BY CategoryName

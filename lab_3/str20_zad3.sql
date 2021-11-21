@@ -2,7 +2,7 @@
 -- dostarcza³a firma ‘United Package
 
 USE Northwind
-SELECT DISTINCT Customers.CompanyName, Customers.Phone
+SELECT Customers.CompanyName, Customers.Phone
 FROM Customers
 JOIN Orders ON Customers.CustomerID = Orders.CustomerID
 JOIN Shippers ON Orders.ShipVia = Shippers.ShipperID

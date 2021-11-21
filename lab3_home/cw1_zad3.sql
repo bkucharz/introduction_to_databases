@@ -7,3 +7,4 @@ FROM [Order Details]
 JOIN Orders ON [Order Details].OrderID = Orders.OrderID
 JOIN Customers ON Orders.CustomerID = Customers.CustomerID
 GROUP BY Orders.OrderID, CompanyName
+ORDER BY 2 DESC

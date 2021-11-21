@@ -1,0 +1,2 @@
+-- Czy s¹ jacyœ klienci którzy nie z³o¿yli ¿adnego zamówienia w 1997 roku, jeœli tak
+-- to poka¿ ich dane adresoweUSE NorthwindSELECT ContactName, AddressFROM CustomersWHERE CustomerID NOT IN (SELECT CustomerID FROM Orders WHERE YEAR(OrderDate) = 1997)
